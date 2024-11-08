@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Inner container for buttons and display */
+.innercontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Display area styles */
+#display {
+    grid-column: span 4;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: right;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+}
+
+/* Button Styles */
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+button.equal {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.equal:hover {
+    background-color: #45a049;
+}
+
+button.clear, button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+button.clear:hover, button.delete:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .innercontainer {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 100%;
+    }
+
+    #display {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .innercontainer {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 100%;
+    }
+
+    #display {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}
